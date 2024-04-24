@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  sysbench-container:
+    image: agnieszkowe/ubuntu_sysbench
+    environment:
+      - OPERATION=${OPERATION}
+      - THREAD_NUM=${THREAD_NUM} 
+    command: /bin/bash -c "sysbench memory --memory-oper=${OPERATION} --threads=${THREAD_NUM} run"

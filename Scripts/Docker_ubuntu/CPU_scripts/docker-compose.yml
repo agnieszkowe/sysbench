@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  sysbench-container:
+    image: agnieszkowe/ubuntu_sysbench
+    environment:
+      - MAX_PRIME=${MAX_PRIME}
+    command: /bin/bash -c "sysbench cpu --cpu-max-prime=${MAX_PRIME} run"

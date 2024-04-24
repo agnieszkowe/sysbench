@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  sysbench-container:
+    image: agnieszkowe/ubuntu_sysbench
+    command: /bin/bash -c "bonnie++ -d boonie-tests/ -s 9816 -u agnieszkowe"
